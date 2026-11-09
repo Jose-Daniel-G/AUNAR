@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página personal de Daniela Pérez, estudiante de programación web.">
+  <meta name="author" content="Daniela Pérez">
+  <title>Daniela Pérez | Página personal</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO: título y menú de navegación ===== -->
+  <header id="inicio">
+    <h1>Daniela Pérez</h1>
+    <p class="subtitulo">Estudiante de programación web</p>
+    <nav>
+      <ul class="menu">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#estudios">Estudios</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#horario">Horario</a></li>
+        <li><a href="#glosario">Glosario</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="paginas/proyectos.html">Proyectos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL: cada tema va en su propia section ===== -->
+  <main>
+
+    <!-- ----- Sobre mí: texto, imagen, citas, listas y enlaces ----- -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+
+      <!-- figure agrupa la imagen con su descripción (figcaption) -->
+      <figure>
+        <img src="img/foto.jpg" alt="Retrato de Daniela sonriendo" width="200">
+        <figcaption>Mi foto de perfil</figcaption>
+      </figure>
+
+      <p>Soy estudiante de programación web y estoy aprendiendo a crear páginas desde cero.
+      Me gusta <em>aprender haciendo</em> y compartir lo que descubro.</p>
+
+      <!-- strong = importancia, em = énfasis, mark = resaltado, br = salto de línea, sup = texto elevado -->
+      <p>Estoy en el 2<sup>.º</sup> módulo del curso y mi meta es <strong>crear mi propio portafolio</strong>.<br>
+      Este mes quiero <mark>terminar el módulo de HTML</mark>.</p>
+
+      <!-- blockquote = cita en bloque, q = cita corta dentro de una frase -->
+      <blockquote>
+        <p>Cada error es una pista para aprender algo nuevo.</p>
+      </blockquote>
+      <p>Mi lema es <q>poco a poco se llega lejos</q>.</p>
+
+      <h3>Mis intereses</h3>
+      <ul>
+        <li>Programación</li>
+        <li>Música
+          <ul>
+            <li>Guitarra</li>
+            <li>Salsa</li>
+          </ul>
+        </li>
+        <li>Fotografía</li>
+      </ul>
+
+      <!-- aside = contenido complementario, que no es parte del texto principal -->
+      <aside>
+        <h3>Dato curioso</h3>
+        <p>La primera página web de la historia apareció en <time datetime="1991">1991</time>.</p>
+      </aside>
+
+      <p>Para más información visita <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">MDN Web Docs</a>.</p>
+    </section>
+
+    <!-- ----- Estudios: article, div, time, hr y lista ordenada ----- -->
+    <section id="estudios">
+      <h2>Formación y práctica</h2>
+
+      <!-- div = caja genérica sin significado; aquí agrupa las tarjetas -->
+      <div class="tarjetas">
+        <!-- article = contenido que tiene sentido por sí solo -->
+        <article>
+          <h3>Curso de Programación Web</h3>
+          <p><time datetime="2026">2026</time> – actualidad</p>
+          <p>Curso de 8 semanas para principiantes: HTML, CSS, JavaScript, backend, bases de datos y Git.</p>
+        </article>
+        <article>
+          <h3>Proyecto personal</h3>
+          <p><time datetime="2026">2026</time></p>
+          <p>Construcción de esta página personal usando solo HTML y CSS.</p>
+        </article>
+      </div>
+
+      <!-- hr = línea horizontal que separa temas -->
+      <hr>
+
+      <h3>Mi ruta de aprendizaje</h3>
+      <!-- ol = lista ordenada (con números) -->
+      <ol>
+        <li>Aprender HTML</li>
+        <li>Darle estilo con CSS</li>
+        <li>Agregar interactividad con JavaScript</li>
+        <li>Publicar mi sitio en internet</li>
+      </ol>
+    </section>
+
+    <!-- ----- Habilidades: progress y lista de descripción ----- -->
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <p>Mi nivel actual (de 0 a 100):</p>
+      <ul class="barras">
+        <li>
+          <label for="barra-html">HTML</label>
+          <progress id="barra-html" value="70" max="100">70%</progress>
+        </li>
+        <li>
+          <label for="barra-css">CSS</label>
+          <progress id="barra-css" value="40" max="100">40%</progress>
+        </li>
+        <li>
+          <label for="barra-js">JavaScript</label>
+          <progress id="barra-js" value="10" max="100">10%</progress>
+        </li>
+      </ul>
+
+      <h3>Herramientas que uso</h3>
+      <!-- dl = lista de descripción: dt es el término y dd su explicación -->
+      <dl>
+        <dt>Visual Studio Code</dt>
+        <dd>El editor donde escribo mi código.</dd>
+        <dt>Live Server</dt>
+        <dd>Extensión que actualiza el navegador cada vez que guardo.</dd>
+        <dt>Navegador</dt>
+        <dd>Chrome o Firefox, para ver el resultado y revisar errores.</dd>
+      </dl>
+    </section>
+
+    <!-- ----- Horario: tabla completa ----- -->
+    <section id="horario">
+      <h2>Horario semanal</h2>
+      <table>
+        <caption>Mi horario de estudio</caption>
+        <thead>
+          <tr>
+            <th scope="col">Hora</th>
+            <th scope="col">Lunes</th>
+            <th scope="col">Martes</th>
+            <th scope="col">Miércoles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">8:00</th>
+            <td>HTML</td>
+            <td>Práctica</td>
+            <td>Lectura</td>
+          </tr>
+          <tr>
+            <th scope="row">10:00</th>
+            <td>Inglés</td>
+            <td>Lectura</td>
+            <td>HTML</td>
+          </tr>
+          <tr>
+            <th scope="row">14:00</th>
+            <td>Proyecto</td>
+            <td>Revisión</td>
+            <td>Proyecto</td>
+          </tr>
+        </tbody>
+        <!-- tfoot = pie de la tabla; colspan hace que una celda ocupe varias columnas -->
+        <tfoot>
+          <tr>
+            <td colspan="4">Total: 9 bloques de estudio por semana</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- ----- Glosario: etiquetas para texto técnico ----- -->
+    <section id="glosario">
+      <h2>Glosario y código</h2>
+
+      <!-- abbr = abreviatura; el title muestra el significado al pasar el mouse -->
+      <p>Siglas que uso mucho:
+        <abbr title="HyperText Markup Language">HTML</abbr>,
+        <abbr title="Cascading Style Sheets">CSS</abbr> y
+        <abbr title="Uniform Resource Locator">URL</abbr>.</p>
+
+      <!-- kbd = tecla del teclado, code = código dentro de una frase -->
+      <p>Para guardar mi archivo presiono <kbd>Ctrl</kbd> + <kbd>S</kbd>.</p>
+      <p>La etiqueta <code>&lt;p&gt;</code> crea un párrafo.</p>
+
+      <!-- pre + code = bloque de código que respeta los espacios y saltos de línea -->
+      <p>Un ejemplo completo:</p>
+      <pre><code>&lt;h1&gt;Hola, mundo&lt;/h1&gt;
+&lt;p&gt;Mi primera página&lt;/p&gt;</code></pre>
+
+      <!-- sub = texto rebajado, small = letra pequeña, del = texto eliminado, ins = texto insertado -->
+      <p>Texto elevado y rebajado: m<sup>2</sup> y H<sub>2</sub>O.</p>
+      <p>Corrección: <del>HTLM</del> <ins>HTML</ins>.</p>
+      <p><small>Nota: las etiquetas que no se ven en pantalla también ayudan a los buscadores.</small></p>
+    </section>
+
+    <!-- ----- Preguntas: details y summary ----- -->
+    <section id="preguntas">
+      <h2>Preguntas frecuentes</h2>
+      <!-- details crea un bloque que se abre y se cierra con un clic; summary es el título visible -->
+      <details>
+        <summary>¿Qué estás aprendiendo ahora?</summary>
+        <p>HTML y CSS, para crear mis propias páginas web desde cero.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tiempo estudias por semana?</summary>
+        <p>Nueve bloques, como se ve en mi horario.</p>
+      </details>
+      <details>
+        <summary>¿Cómo puedo contactarte?</summary>
+        <p>Usa el formulario de la sección Contacto.</p>
+      </details>
+    </section>
+
+    <!-- ----- Contacto: address y formulario completo ----- -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+
+      <!-- address = datos de contacto; mailto: abre el correo y tel: abre el marcador del teléfono -->
+      <address>
+        Escríbeme a <a href="mailto:daniela@ejemplo.com">daniela@ejemplo.com</a><br>
+        o llámame al <a href="tel:+570000000000">+57 000 000 0000</a>
+      </address>
+
+      <form action="#" method="post">
+
+        <!-- fieldset agrupa campos relacionados y legend le pone título al grupo -->
+        <fieldset>
+          <legend>Tus datos</legend>
+          <p>
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
+          </p>
+          <p>
+            <label for="correo">Correo</label><br>
+            <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+          </p>
+          <p>
+            <label for="telefono">Teléfono</label><br>
+            <input type="tel" id="telefono" name="telefono" placeholder="300 000 0000">
+          </p>
+          <p>
+            <!-- datalist ofrece sugerencias, pero la persona puede escribir otra cosa -->
+            <label for="ciudad">Ciudad</label><br>
+            <input type="text" id="ciudad" name="ciudad" list="ciudades">
+            <datalist id="ciudades">
+              <option value="Cali"></option>
+              <option value="Bogotá"></option>
+              <option value="Medellín"></option>
+              <option value="Barranquilla"></option>
+            </datalist>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu mensaje</legend>
+          <p>
+            <label for="motivo">Motivo</label><br>
+            <select id="motivo" name="motivo">
+              <optgroup label="Trabajo">
+                <option value="trabajo">Propuesta de trabajo</option>
+                <option value="colaboracion">Colaboración</option>
+              </optgroup>
+              <optgroup label="Otros">
+                <option value="consulta">Consulta</option>
+                <option value="otro">Otro</option>
+              </optgroup>
+            </select>
+          </p>
+          <p>
+            <label for="fecha">Fecha preferida para hablar</label><br>
+            <input type="date" id="fecha" name="fecha">
+          </p>
+          <p>
+            <label for="urgencia">Urgencia (1 = baja, 5 = alta)</label><br>
+            <input type="range" id="urgencia" name="urgencia" min="1" max="5" value="3">
+          </p>
+          <p>Prefiero que me respondan por:</p>
+          <p>
+            <input type="radio" id="resp-correo" name="respuesta" value="correo" checked>
+            <label for="resp-correo">Correo</label>
+            <input type="radio" id="resp-telefono" name="respuesta" value="telefono">
+            <label for="resp-telefono">Teléfono</label>
+          </p>
+          <p>
+            <label for="mensaje">Mensaje</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="40"></textarea>
+          </p>
+          <p>
+            <label for="adjunto">Adjuntar un archivo</label><br>
+            <input type="file" id="adjunto" name="adjunto">
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="acepto" name="acepto" required>
+          <label for="acepto">Acepto que me contacten</label>
+        </p>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar todo</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    <p><small>&copy; 2026 Daniela Pérez</small></p>
+    <p><a href="#inicio">Volver arriba</a></p>
+  </footer>
+
+</body>
+</html>

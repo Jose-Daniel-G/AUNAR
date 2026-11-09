@@ -1,0 +1,377 @@
+/* =====================================================
+   HOJA DE ESTILOS DE LA PÁGINA PERSONAL
+   Cada regla se escribe así:
+       selector { propiedad: valor; }
+   ===================================================== */
+
+
+/* ---------- 1. BASE: la página completa y el modelo de caja ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #222222;
+  line-height: 1.6;
+  max-width: 900px;   /* la página nunca será más ancha que esto */
+  margin: 0 auto;     /* centrada: arriba/abajo 0, a los lados "auto" */
+  padding: 20px;      /* espacio interno */
+}
+
+
+/* ---------- 2. TEXTO: títulos, enlaces y etiquetas de texto ---------- */
+/* Selector agrupado: varias etiquetas comparten una regla */
+h1, h2, h3 {
+  color: #1b4965;
+}
+
+h2 {
+  border-bottom: 2px solid #62b6cb;
+  padding-bottom: 6px;
+}
+
+a {
+  color: #0a6ebd;
+}
+
+em {
+  color: #c2410c;
+}
+
+mark {
+  background-color: #ffe58a;
+  padding: 0 4px;
+}
+
+small {
+  color: #555555;
+}
+
+abbr {
+  cursor: help;           /* el cursor cambia para indicar que hay ayuda */
+}
+
+code {
+  background-color: #eef1f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+kbd {
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+/* Selector descendiente: solo el <code> que está dentro de un <pre> */
+pre {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;       /* si el código es largo, aparece una barra lateral */
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 4px solid #62b6cb;
+  background-color: #eef6f9;
+  margin: 16px 0;
+  padding: 8px 16px;
+  font-style: italic;
+  color: #555555;
+}
+
+
+/* ---------- 3. ENCABEZADO Y MENÚ ---------- */
+header {
+  background-color: #1b4965;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Selector de clase: el punto (.) busca class="subtitulo" */
+.subtitulo {
+  margin: 4px 0 16px;
+  color: #bee9e8;
+}
+
+.menu {
+  list-style: none;       /* quita los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  display: flex;          /* pone los elementos en fila */
+  flex-wrap: wrap;        /* si no caben, bajan a otra línea */
+  gap: 8px 20px;          /* separación vertical y horizontal */
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* :hover se activa cuando el mouse pasa por encima */
+.menu a:hover {
+  text-decoration: underline;
+  color: #bee9e8;
+}
+
+
+/* ---------- 4. SECCIONES COMO TARJETAS (modelo de caja) ---------- */
+/* De adentro hacia afuera: contenido > padding > border > margin */
+section {
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+
+/* ---------- 5. IMÁGENES Y FIGURAS ---------- */
+img {
+  border-radius: 8px;
+  max-width: 100%;        /* nunca se sale de su contenedor */
+  height: auto;
+}
+
+figure {
+  margin: 0 0 16px 0;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #555555;
+}
+
+
+/* ---------- 6. LISTAS, SEPARADORES Y CAJAS ESPECIALES ---------- */
+dt {
+  font-weight: bold;
+  color: #1b4965;
+}
+
+dd {
+  margin: 0 0 10px 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #b0bcc8;
+  margin: 24px 0;
+}
+
+aside {
+  background-color: #fff8e1;
+  border: 1px solid #f0d58a;
+  border-radius: 8px;
+  padding: 4px 16px;
+  margin: 16px 0;
+}
+
+/* Tarjetas una al lado de la otra */
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+article {
+  flex: 1 1 250px;        /* crecen por igual, mínimo 250px de ancho */
+  background-color: #f9fbfc;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 4px 16px 12px;
+}
+
+/* Barras de progreso */
+.barras {
+  list-style: none;
+  padding: 0;
+}
+
+.barras li {
+  margin-bottom: 8px;
+}
+
+.barras label {
+  display: inline-block;  /* permite darle un ancho fijo */
+  width: 100px;
+  font-weight: bold;
+}
+
+progress {
+  width: 60%;
+  height: 16px;
+}
+
+
+/* ---------- 7. TABLA ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;   /* une los bordes de las celdas */
+}
+
+caption {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+th, td {
+  border: 1px solid #d0d7de;
+  padding: 10px;
+  text-align: center;
+}
+
+thead th {
+  background-color: #1b4965;
+  color: #ffffff;
+}
+
+tbody th {
+  background-color: #eef6f9;
+}
+
+/* :nth-child(even) = filas pares, para el efecto cebra */
+tbody tr:nth-child(even) {
+  background-color: #f4f6f8;
+}
+
+tbody tr:hover {
+  background-color: #e0f2fe;
+}
+
+tfoot td {
+  background-color: #eef6f9;
+  font-weight: bold;
+}
+
+
+/* ---------- 8. FORMULARIO ---------- */
+fieldset {
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+}
+
+legend {
+  font-weight: bold;
+  color: #1b4965;
+  padding: 0 8px;
+}
+
+address {
+  font-style: normal;     /* por defecto va en cursiva */
+  margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #b0bcc8;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;   /* usa la misma letra del resto de la página */
+  box-sizing: border-box; /* el padding no agranda la caja */
+}
+
+/* :focus se activa cuando el campo está seleccionado */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0a6ebd;
+  box-shadow: 0 0 0 3px rgba(10, 110, 189, 0.25);
+}
+
+button {
+  background-color: #0a6ebd;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #084e87;
+}
+
+button[type="reset"] {
+  background-color: #6b7280;
+}
+
+button[type="reset"]:hover {
+  background-color: #4b5563;
+}
+
+
+/* ---------- 9. PREGUNTAS (details) ---------- */
+details {
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #1b4965;
+}
+
+/* [open] = cuando el bloque está abierto */
+details[open] {
+  background-color: #f4f9fc;
+}
+
+
+/* ---------- 10. PIE DE PÁGINA ---------- */
+footer {
+  text-align: center;
+  color: #555555;
+}
+
+
+/* ---------- 11. PANTALLAS PEQUEÑAS (celulares) ---------- */
+/* Estas reglas solo se aplican si la pantalla mide 600px o menos */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .menu {
+    flex-direction: column;   /* el menú pasa de fila a columna */
+  }
+
+  section {
+    padding: 14px;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 14px;
+  }
+}

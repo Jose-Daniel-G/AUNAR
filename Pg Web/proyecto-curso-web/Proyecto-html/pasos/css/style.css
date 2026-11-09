@@ -1,0 +1,89 @@
+/* PASO 12: el modelo de caja
+
+   Una regla CSS se escribe así:
+
+   selector {
+     propiedad: valor;
+   }
+
+   - selector:  a qué etiqueta HTML le aplico el estilo
+   - propiedad: qué quiero cambiar
+   - valor:     cómo lo quiero
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* tipo de letra */
+  background-color: #f4f6f8;                 /* color de fondo de la página */
+  color: #222222;                            /* color del texto */
+  line-height: 1.6;                          /* espacio entre líneas */
+}
+
+/* NUEVO: selector agrupado.
+   Con comas, varias etiquetas comparten una sola regla. */
+h1, h2, h3 {
+  color: #1b4965;
+}
+
+a {
+  color: #0a6ebd;
+}
+
+em {
+  color: #c2410c;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555555;
+}
+
+/* NUEVO: selector de clase.
+   Un punto (.) busca los elementos que tienen class="menu" en el HTML. */
+.menu {
+  list-style: none;   /* quita los puntos de la lista */
+  padding: 0;         /* quita el espacio que trae la lista por defecto */
+  display: flex;      /* pone los elementos uno al lado del otro */
+  gap: 20px;          /* separación entre elementos */
+}
+
+.menu a {
+  text-decoration: none;  /* quita el subrayado */
+  font-weight: bold;      /* letra en negrita */
+}
+
+/* :hover se activa cuando pasas el mouse por encima */
+.menu a:hover {
+  text-decoration: underline;
+  color: #c2410c;
+}
+
+/* NUEVO: el modelo de caja.
+   Cada elemento es una caja con estas capas, de adentro hacia afuera:
+
+   contenido -> padding (espacio interno) -> border (borde) -> margin (espacio externo)
+*/
+
+/* Centramos todo el contenido y limitamos su ancho */
+body {
+  max-width: 800px;   /* la página nunca será más ancha que esto */
+  margin: 0 auto;     /* arriba/abajo 0, a los lados "auto" = centrado */
+  padding: 20px;      /* espacio interno */
+}
+
+/* Cada sección se vuelve una "tarjeta" */
+section {
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;     /* esquinas redondeadas */
+  padding: 20px;
+  margin-bottom: 24px;    /* espacio hacia abajo */
+}
+
+img {
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  color: #555555;
+}
